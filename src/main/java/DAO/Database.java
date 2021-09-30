@@ -14,7 +14,7 @@ public class Database {
         for (int i = 0; i < size; i++){
             products[i] = new Product(i, random.ints(97, 123).limit(10)
                     .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append).toString(),
-                    5 + random.nextFloat() * (995), image);
+                    5 + random.nextDouble() * (995), image);
             description[i] = new Description(i, "", random.ints(97, 123).limit(100)
                     .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append).toString());
         }

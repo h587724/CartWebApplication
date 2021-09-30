@@ -10,10 +10,10 @@ public class Product {
 
     private int pno;
     private String pName;
-    private float priceInEuro;
+    private double priceInEuro;
     private String imageFile;
 
-    public Product (int pno, String pName, float price, String image) {
+    public Product (int pno, String pName, double price, String image) {
         this.pno = pno;
         this.pName = pName;
         this.priceInEuro = price;
@@ -26,11 +26,11 @@ public class Product {
         this.pName = pName;
     }
 
-    public float getPriceInEuro() {
+    public double getPriceInEuro() {
         return priceInEuro;
     }
 
-    public void setPriceInEuro(float priceInEuro) {
+    public void setPriceInEuro(double priceInEuro) {
         this.priceInEuro = priceInEuro;
     }
 

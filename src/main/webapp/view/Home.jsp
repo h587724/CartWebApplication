@@ -25,9 +25,8 @@
         <a href="?lang=no">Home (Norsk)</a> &nbsp;|&nbsp;
         <a href="?lang=es">Home (Spanish)</a> &nbsp;|&nbsp;
     </div>
-    <p><fmt:message key="label.text"/>
-        <h1>KEK</h1>
-    <a href="view/Product.jsp"><fmt:message key="label.productText"/></a>
+    <p><fmt:message key="homeText"/>
+    <a href="view/Product.jsp"><fmt:message key="homeProduct"/></a>
     </p>
     <c:if test="${not empty param.sessionLocale}">
         <fmt:message key="label.cookieChangeSuccess"/>
