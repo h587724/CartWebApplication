@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="Oblig2:war exploded">
-    <output-path>$PROJECT_DIR$/target/Oblig2-1.0-SNAPSHOT</output-path>
+    <output-path>$PROJECT_DIR$/target/Oblig2</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>

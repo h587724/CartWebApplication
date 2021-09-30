@@ -2,16 +2,16 @@ package DAO;
 
 import javax.persistence.*;
 
-@Entity
 public class Description {
-    @Id
     private int pno;
-    private int langCode;
+    private String langCode;
     private String text;
-    @OneToOne
-    @JoinColumn(name="pno")
-    @MapsId
-    private Product product;
+
+    public Description (int pno, String langCode, String text) {
+        this.pno = pno;
+        this.langCode = langCode;
+        this.text = text;
+    }
 
     public int getPno() {
         return pno;
@@ -21,11 +21,11 @@ public class Description {
         this.pno = pno;
     }
 
-    public int getLangCode() {
+    public String getLangCode() {
         return langCode;
     }
 
-    public void setLangCode(int langCode) {
+    public void setLangCode(String langCode) {
         this.langCode = langCode;
     }
 

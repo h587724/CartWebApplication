@@ -5,18 +5,22 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity
+
 public class Product {
-    @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+
     private int pno;
     private String pName;
     private float priceInEuro;
     private String imageFile;
 
-    public String getpName() {
-        return pName;
+    public Product (int pno, String pName, float price, String image) {
+        this.pno = pno;
+        this.pName = pName;
+        this.priceInEuro = price;
+        this.imageFile = image;
     }
+
+    public String getpName() { return pName; }
 
     public void setpName(String pName) {
         this.pName = pName;
