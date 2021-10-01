@@ -21,13 +21,13 @@ public class I18n {
     public double convertCurrency (double price, String code){
         switch(code){
             case ("en"):
-                return price;
+                return Math.round(price * 0.85);
             case ("no"):
-                return price * 11.80;
+                return Math.round(price * 10);
             case ("es"):
-                return price * 1.16;
+                return Math.round(price);
             default:
-                return price;
+                return Math.round(price * 0.85);
         }
     }
 }
