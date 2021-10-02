@@ -11,27 +11,25 @@
 <%@ page isELIgnored="false" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<fmt:setLocale value="${sessionScope.lang}"/>
+
+<fmt:setLocale value="${cookie['lang'].value}"/>
 <fmt:setBundle basename="messages"/>
 
-<html lang="${param.lang}">
+<html lang="$${cookie['lang'].value}">
 <head>
     <title>Home</title>
 </head>
 <body>
-<fmt:message key="label.chooseSessionLocale"/>
+    <h1>Kaffekopper AS</h1>
     <div>
-        <a href="?lang=en">Home (English)</a> &nbsp;|&nbsp;
-        <a href="?lang=no">Home (Norsk)</a> &nbsp;|&nbsp;
-        <a href="?lang=es">Home (Spanish)</a> &nbsp;|&nbsp;
+        <a href="?cookieLocale=en">Home (English) </a> &nbsp;|&nbsp;
+        <a href="?cookieLocale=no">Home (Norsk)  </a> &nbsp;|&nbsp;
+        <a href="?cookieLocale=es">Home (Spanish)  </a>
     </div>
+    <img alt="Store image" src="/WEB-INF/images/store.jpg" width="40%" height="30%"/>
     <p><fmt:message key="homeText"/>
     <a href="view/Product.jsp"><fmt:message key="homeProduct"/></a>
     </p>
-    <c:if test="${not empty param.sessionLocale}">
-        <fmt:message key="label.cookieChangeSuccess"/>
-        <button><a href="Product.jsp"><fmt:message key="label.productText"/></a></button>
-    </c:if>
 </body>
 </html>
 

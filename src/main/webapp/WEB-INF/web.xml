@@ -7,10 +7,10 @@
         <welcome-file>view/Home.jsp</welcome-file>
     </welcome-file-list>
     <servlet>
-        <servlet-name>HomeController</servlet-name>
+        <servlet-name>Controllers/HomeController</servlet-name>
     </servlet>
     <servlet-mapping>
-        <servlet-name>HomeController</servlet-name>
+        <servlet-name>Controllers/HomeController</servlet-name>
         <url-pattern>/HomeController</url-pattern>
     </servlet-mapping>
 </web-app>
