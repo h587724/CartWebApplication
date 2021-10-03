@@ -20,6 +20,18 @@ public class Product {
         this.imageFile = image;
     }
 
+    public double convertCurrencyToLb(){
+        return Math.round(priceInEuro * 100 * 0.85)/100;
+    }
+
+    public double convertCurrencyToNok(){
+        return Math.round(priceInEuro * 100 * 10)/100;
+    }
+
+    public double convertCurrencyToEur(){
+        return Math.round(priceInEuro * 100)/100;
+    }
+
     public String getpName() { return pName; }
 
     public void setpName(String pName) {

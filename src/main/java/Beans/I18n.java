@@ -5,7 +5,7 @@ import java.util.ResourceBundle;
 
 public class I18n {
 
-    public ResourceBundle getLocale (String code) {
+    public static ResourceBundle getLocale (String code) {
         switch (code) {
             case ("en"):
                 return ResourceBundle.getBundle("messages", new Locale("en", "UK"));
@@ -18,7 +18,7 @@ public class I18n {
         }
     }
 
-    public double convertCurrency (double price, String code){
+    public static double convertCurrency (double price, String code){
         switch(code){
             case ("en"):
                 return Math.round(price * 0.85);

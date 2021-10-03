@@ -13,4 +13,11 @@
         <servlet-name>Controllers/HomeController</servlet-name>
         <url-pattern>/HomeController</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>Controllers/ProductsController</servlet-name>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Controllers/ProductsController</servlet-name>
+        <url-pattern>/ProductsController</url-pattern>
+    </servlet-mapping>
 </web-app>

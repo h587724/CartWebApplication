@@ -15,7 +15,7 @@
 <fmt:setLocale value="${cookie['lang'].value}"/>
 <fmt:setBundle basename="messages"/>
 
-<html lang="$${cookie['lang'].value}">
+<html lang="${cookie['lang'].value}">
 <head>
     <title>Home</title>
 </head>
@@ -25,10 +25,10 @@
         <a href="?cookieLocale=en">Home (English) </a> &nbsp;|&nbsp;
         <a href="?cookieLocale=no">Home (Norsk)  </a> &nbsp;|&nbsp;
         <a href="?cookieLocale=es">Home (Spanish)  </a>
-    </div>
-    <img alt="Store image" src="/WEB-INF/images/store.jpg" width="40%" height="30%"/>
+    </div><br>
+    <img alt="Store image" src="http://localhost:8080/Oblig2/view/images/store.jpg" width="35%" height="40%"/>
     <p><fmt:message key="homeText"/>
-    <a href="view/Product.jsp"><fmt:message key="homeProduct"/></a>
+        <a href="http://localhost:8080/Oblig2/HomeController"><fmt:message key="homeProduct"/></a>
     </p>
 </body>
 </html>
