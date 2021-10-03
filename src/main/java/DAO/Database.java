@@ -10,10 +10,9 @@ public class Database {
     private Description[] descriptionEs;
 
     private Description[] descriptionNo;
+    private String image = "";
 
-
-    private final String image = "image";
-
+    // Creates a Database of 3 randomly generated objects
     public Database (int size) {
         Product[] products = new Product[size];
         Description[] descriptionEng = new Description[size];
@@ -35,6 +34,18 @@ public class Database {
         this.descriptionEng = descriptionEng;
         this.descriptionNo = descriptionNo;
         this.descriptionEs = descriptionEs;
+    }
+
+    public Product findProduct(int pno){
+        Product product = null;
+        if (products != null){
+            for (Product p : products){
+                if (p.getPno() == pno){
+                    product = p;
+                }
+            }
+        }
+        return product;
     }
 
     public Product[] getProducts() {

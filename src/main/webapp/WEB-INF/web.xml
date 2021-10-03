@@ -7,17 +7,27 @@
         <welcome-file>view/Home.jsp</welcome-file>
     </welcome-file-list>
     <servlet>
-        <servlet-name>Controllers/HomeController</servlet-name>
+        <servlet-name>HomeController</servlet-name>
+        <servlet-class>Controllers.HomeController</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>Controllers/HomeController</servlet-name>
+        <servlet-name>HomeController</servlet-name>
         <url-pattern>/HomeController</url-pattern>
     </servlet-mapping>
     <servlet>
-        <servlet-name>Controllers/ProductsController</servlet-name>
+        <servlet-name>ProductsController</servlet-name>
+        <servlet-class>Controllers.ProductsController</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>Controllers/ProductsController</servlet-name>
+        <servlet-name>ProductsController</servlet-name>
         <url-pattern>/ProductsController</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CartController</servlet-name>
+        <servlet-class>Controllers.CartController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CartController</servlet-name>
+        <url-pattern>/CartController</url-pattern>
     </servlet-mapping>
 </web-app>
