@@ -1,5 +1,6 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="T" uri="http://tomcat.apache.org/example-taglib" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <fmt:setLocale value="${cookie['lang'].value}"/>
 <fmt:setBundle basename="messages"/>
@@ -33,37 +34,36 @@
         </c:if>
         <c:forEach var="cartItem" items="${cart.products}" varStatus="status">
             <form method="post" action="/CartController">
-                <tr>
                     <td>
-                        <c:out value="${cartItem.pName}"/>
+                        <c:out value="${cartItem.key.pName}"/>
                     </td>
                     <td>
-                        <c:out value="${descriptions[status.index].text}"/>
+                        <T:shortText limit="10"><c:out value="${descriptions[status.index].text}"/></T:shortText>
                     </td>
                     <td>
                         <c:if test="${langCode == 'en'}">
-                            <c:out value="${cartItem.convertCurrencyToLb()}"/>
+                            <c:out value="${cartItem.key.convertCurrencyToLb()}"/>
                         </c:if>
                         <c:if test="${langCode == 'no'}">
-                            <c:out value="${cartItem.convertCurrencyToNok()}"/>
+                            <c:out value="${cartItem.key.convertCurrencyToNok()}"/>
                         </c:if>
                         <c:if test="${langCode == 'es'}">
-                            <c:out value="${cartItem.convertCurrencyToEur()}"/>
+                            <c:out value="${cartItem.key.convertCurrencyToEur()}"/>
                         </c:if>
                         <fmt:message key="currency"/>
                     </td>
                     <td>
-                        1
+                        <c:out value="${cartItem.value}"></c:out>
                     </td>
                     <td>
                         <c:if test="${langCode == 'en'}">
-                            <c:out value="${cartItem.convertCurrencyToLb()}"/>
+                            <c:out value="${cartItem.key.convertCurrencyToLb() * cartItem.value}"/>
                         </c:if>
                         <c:if test="${langCode == 'no'}">
-                            <c:out value="${cartItem.convertCurrencyToNok()}"/>
+                            <c:out value="${cartItem.key.convertCurrencyToNok() * cartItem.value}"/>
                         </c:if>
                         <c:if test="${langCode == 'es'}">
-                            <c:out value="${cartItem.convertCurrencyToEur()}"/>
+                            <c:out value="${cartItem.key.convertCurrencyToEur() * cartItem.value}"/>
                         </c:if>
                         <fmt:message key="currency"/>
                     </td>

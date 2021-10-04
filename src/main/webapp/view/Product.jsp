@@ -39,7 +39,6 @@
         <br><br><br>
         </form>
     </c:forEach>
-
     <a href url="http://localhost:8080/Oblig2/"><fmt:message key="goHome"/></a>&nbsp;|&nbsp;
     <a href url="http://localhost:8080/Oblig2/ProductsController"><fmt:message key="goToCart"/></a>
 </body>

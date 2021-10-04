@@ -1,17 +1,11 @@
 package Controllers;
 
-import Beans.I18n;
-import DAO.Cart;
 import DAO.Database;
-import DAO.Description;
-import DAO.Product;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.ResourceBundle;
 
 @WebServlet("/HomeController")
 public class HomeController extends HttpServlet {
